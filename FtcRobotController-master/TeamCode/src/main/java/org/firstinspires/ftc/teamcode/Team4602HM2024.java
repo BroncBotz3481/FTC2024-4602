@@ -23,7 +23,7 @@ public class Team4602HM2024 {
 
     public DcMotor Arm2 = null;
 
-    public Servo Intake = null;
+//    public Servo Intake = null;
 
     public NormalizedColorSensor ColorSensor = null;
 
@@ -60,31 +60,31 @@ public class Team4602HM2024 {
         DriveRightBack.setZeroPowerBehavior(DcMotor.ZeroPowerBehavior.BRAKE);
         DriveRightBack.setMode(DcMotor.RunMode.RUN_WITHOUT_ENCODER);
 
-        Turret = hwMap.get(DcMotor.class,"Turret");
-        Turret.setDirection(DcMotorSimple.Direction.REVERSE);
-        Turret.setZeroPowerBehavior(DcMotor.ZeroPowerBehavior.BRAKE);
-        //IntakeLift.setDirection(DcMotor.Direction.REVERSE);
+//        Turret = hwMap.get(DcMotor.class,"Turret");
+//        Turret.setDirection(DcMotorSimple.Direction.REVERSE);
+//        Turret.setZeroPowerBehavior(DcMotor.ZeroPowerBehavior.BRAKE);
+//        //IntakeLift.setDirection(DcMotor.Direction.REVERSE);
 
-        Elevator = hwMap.get(DcMotor.class, "Elevator");
-        Elevator.setDirection(DcMotorSimple.Direction.REVERSE);
-        Elevator.setZeroPowerBehavior(DcMotor.ZeroPowerBehavior.BRAKE);
-        Elevator.setMode(DcMotor.RunMode.RUN_WITHOUT_ENCODER);
+//        Elevator = hwMap.get(DcMotor.class, "Elevator");
+//        Elevator.setDirection(DcMotorSimple.Direction.REVERSE);
+//        Elevator.setZeroPowerBehavior(DcMotor.ZeroPowerBehavior.BRAKE);
+//        Elevator.setMode(DcMotor.RunMode.RUN_WITHOUT_ENCODER);
 
-        Arm1 = hwMap.get(DcMotor.class, "Arm1");
-        Arm1.setDirection(DcMotorSimple.Direction.REVERSE);
-        Arm1.setZeroPowerBehavior(DcMotor.ZeroPowerBehavior.BRAKE);
-        Arm1.setMode(DcMotor.RunMode.RUN_WITHOUT_ENCODER);
+//        Arm1 = hwMap.get(DcMotor.class, "Arm1");
+//        Arm1.setDirection(DcMotorSimple.Direction.REVERSE);
+//        Arm1.setZeroPowerBehavior(DcMotor.ZeroPowerBehavior.BRAKE);
+//        Arm1.setMode(DcMotor.RunMode.RUN_WITHOUT_ENCODER);
 
-        Arm2 = hwMap.get(DcMotor.class, "Arm2");
-        Arm2.setDirection(DcMotorSimple.Direction.REVERSE);
-        Arm2.setZeroPowerBehavior(DcMotor.ZeroPowerBehavior.BRAKE);
-        Arm2.setMode(DcMotor.RunMode.RUN_WITHOUT_ENCODER);
+//        Arm2 = hwMap.get(DcMotor.class, "Arm2");
+//        Arm2.setDirection(DcMotorSimple.Direction.REVERSE);
+//        Arm2.setZeroPowerBehavior(DcMotor.ZeroPowerBehavior.BRAKE);
+//        Arm2.setMode(DcMotor.RunMode.RUN_WITHOUT_ENCODER);
 
-        Intake = hwMap.get(Servo.class, "Servo1");
+//        Intake = hwMap.get(Servo.class, "Servo1");
 
         //Arm = hwMap.get(DcMotor.class, "Arm");
 
-        ColorSensor = hwMap.get(NormalizedColorSensor.class, "sensor");
+//        ColorSensor = hwMap.get(NormalizedColorSensor.class, "sensor");
 
     }
 }

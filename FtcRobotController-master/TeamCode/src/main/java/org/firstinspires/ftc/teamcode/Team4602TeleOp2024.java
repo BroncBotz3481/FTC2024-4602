@@ -23,7 +23,7 @@ public class Team4602TeleOp2024 extends LinearOpMode {
         robot.DriveRightBack.setMode(DcMotor.RunMode.RUN_WITHOUT_ENCODER);
         robot.DriveLeftFront.setMode(DcMotor.RunMode.STOP_AND_RESET_ENCODER);
         robot.DriveLeftFront.setMode(DcMotor.RunMode.RUN_WITHOUT_ENCODER);
-        robot.Intake.setPosition(0.3);
+//        robot.Intake.setPosition(0.3);
 
         int count = 0;
         //robot.Lights.setPattern(RevBlinkinLedDriver.BlinkinPattern.BEATS_PER_MINUTE_PARTY_PALETTE);
@@ -64,17 +64,17 @@ public class Team4602TeleOp2024 extends LinearOpMode {
             robot.DriveRightFront.setPower(frontRightPower * mag);
             robot.DriveRightBack.setPower(backRightPower * mag);
 
-            double Arm1 = gamepad2.right_stick_y;
-            double Arm2 = gamepad2.left_stick_y;
-            robot.Arm1.setPower(Arm1);
-            robot.Arm2.setPower(Arm2);
+//            double Arm1 = gamepad2.right_stick_y;
+//            double Arm2 = gamepad2.left_stick_y;
+//            robot.Arm1.setPower(Arm1);
+//            robot.Arm2.setPower(Arm2);
             // left bumper is open, right bumper is close
-            if (gamepad2.right_bumper) {
-                robot.Intake.setPosition(1.0);
-            }
-            if (gamepad2.left_bumper){
-                robot.Intake.setPosition(0.3);
-            }
+//            if (gamepad2.right_bumper) {
+//                robot.Intake.setPosition(1.0);
+//            }
+//            if (gamepad2.left_bumper){
+//                robot.Intake.setPosition(0.3);
+//            }
 
 //            if(gamepad2.y){
 //                robot.Arm1.setPower(.9);
