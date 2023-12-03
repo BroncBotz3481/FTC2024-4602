@@ -2,10 +2,36 @@ package org.firstinspires.ftc.teamcode;
 
 import com.qualcomm.robotcore.eventloop.opmode.Autonomous;
 import com.qualcomm.robotcore.eventloop.opmode.LinearOpMode;
-import com.qualcomm.robotcore.hardware.DcMotor;
 import com.qualcomm.robotcore.util.ElapsedTime;
 
-@Autonomous(name="Team4602Auto1ParkingBlue", group="4602")
+@Autonomous (name="Team4602Auto1ParkingBlue", group="4602")
+public class Team4602Auto1ParkingBlue extends LinearOpMode {
+
+    Team4602HM2024 robot = new Team4602HM2024();
+    ElapsedTime Time = new ElapsedTime();
+
+
+    @Override
+    public void runOpMode() {
+        robot.Map(hardwareMap);
+        waitForStart();
+
+        moveForward(0.6, 1400); //moves forward
+    }
+
+    public void moveForward(double power, int time) {
+        robot.DriveRightFront.setPower(-power);
+        robot.DriveLeftFront.setPower(-power);
+        robot.DriveRightBack.setPower(-power);
+        robot.DriveLeftBack.setPower(-power);
+        sleep(time);
+        robot.DriveRightFront.setPower(0);
+        robot.DriveLeftFront.setPower(0);
+        robot.DriveRightBack.setPower(0);
+        robot.DriveLeftBack.setPower(0);
+    }
+}
+/*@Autonomous(name="Team4602Auto1ParkingBlue", group="4602")
 
 public class Team4602Auto1ParkingBlue extends LinearOpMode {
     Team4602HM2024 robot = new Team4602HM2024();
@@ -40,3 +66,5 @@ public class Team4602Auto1ParkingBlue extends LinearOpMode {
         robot.DriveRightFront.setMode(DcMotor.RunMode.RUN_USING_ENCODER);
     }
 }
+
+ */
