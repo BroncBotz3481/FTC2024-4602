@@ -23,7 +23,9 @@ public class Team4602HM2024 {
 
     public DcMotor Arm2 = null;
 
-//    public Servo Intake = null;
+    public CRServo rArm = null;
+
+    public CRServo lArm = null;
 
     public NormalizedColorSensor ColorSensor = null;
 
@@ -60,6 +62,8 @@ public class Team4602HM2024 {
         DriveRightBack.setZeroPowerBehavior(DcMotor.ZeroPowerBehavior.BRAKE);
         DriveRightBack.setMode(DcMotor.RunMode.RUN_WITHOUT_ENCODER);
 
+        rArm = hwMap.get(CRServo.class, "rArm");
+        lArm = hwMap.get(CRServo.class, "rArm");
 //        Turret = hwMap.get(DcMotor.class,"Turret");
 //        Turret.setDirection(DcMotorSimple.Direction.REVERSE);
 //        Turret.setZeroPowerBehavior(DcMotor.ZeroPowerBehavior.BRAKE);

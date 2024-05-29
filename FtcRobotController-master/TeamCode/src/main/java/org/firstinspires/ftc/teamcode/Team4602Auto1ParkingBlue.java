@@ -17,6 +17,8 @@ public class Team4602Auto1ParkingBlue extends LinearOpMode {
         waitForStart();
 
         moveForward(0.6, 1400); //moves forward
+        moveBackwards(0.6,1400);
+        moveside(0.6, 1400);
     }
 
     public void moveForward(double power, int time) {
@@ -24,6 +26,28 @@ public class Team4602Auto1ParkingBlue extends LinearOpMode {
         robot.DriveLeftFront.setPower(-power);
         robot.DriveRightBack.setPower(-power);
         robot.DriveLeftBack.setPower(-power);
+        sleep(time);
+        robot.DriveRightFront.setPower(0);
+        robot.DriveLeftFront.setPower(0);
+        robot.DriveRightBack.setPower(0);
+        robot.DriveLeftBack.setPower(0);
+    }
+    public void moveBackwards(double power, int time) {
+        robot.DriveRightFront.setPower(power);
+        robot.DriveLeftFront.setPower(power);
+        robot.DriveRightBack.setPower(power);
+        robot.DriveLeftBack.setPower(power);
+        sleep(time);
+        robot.DriveRightFront.setPower(0);
+        robot.DriveLeftFront.setPower(0);
+        robot.DriveRightBack.setPower(0);
+        robot.DriveLeftBack.setPower(0);
+    }
+    public void moveside(double power, int time) {
+        robot.DriveRightFront.setPower(power);
+        robot.DriveLeftFront.setPower(-power);
+        robot.DriveRightBack.setPower(-power);
+        robot.DriveLeftBack.setPower(power);
         sleep(time);
         robot.DriveRightFront.setPower(0);
         robot.DriveLeftFront.setPower(0);

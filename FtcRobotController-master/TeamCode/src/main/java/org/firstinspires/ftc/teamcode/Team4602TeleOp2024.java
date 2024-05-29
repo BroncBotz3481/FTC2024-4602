@@ -64,6 +64,10 @@ public class Team4602TeleOp2024 extends LinearOpMode {
             robot.DriveRightFront.setPower(frontRightPower * mag);
             robot.DriveRightBack.setPower(backRightPower * mag);
 
+            double armPos = gamepad2.left_stick_y;
+            robot.lArm.setPower(armPos * 0.4);
+            robot.rArm.setPower(-armPos * 0.4);
+
 //            double Arm1 = gamepad2.right_stick_y;
 //            double Arm2 = gamepad2.left_stick_y;
 //            robot.Arm1.setPower(Arm1);
