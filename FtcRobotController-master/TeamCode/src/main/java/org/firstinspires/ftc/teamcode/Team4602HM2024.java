@@ -16,16 +16,10 @@ public class Team4602HM2024 {
     public DcMotor DriveLeftFront = null;
     public DcMotor DriveRightFront = null;
 
-    public DcMotor Turret = null;
-    public DcMotor Elevator = null;
 
-    public DcMotor liftMotor = null;
 
-    public DcMotor Arm2 = null;
 
-    public CRServo rArm = null;
 
-    public CRServo lArm = null;
 
     public NormalizedColorSensor ColorSensor = null;
 
@@ -62,8 +56,7 @@ public class Team4602HM2024 {
         DriveRightBack.setZeroPowerBehavior(DcMotor.ZeroPowerBehavior.BRAKE);
         DriveRightBack.setMode(DcMotor.RunMode.RUN_WITHOUT_ENCODER);
 
-        rArm = hwMap.get(CRServo.class, "rArm");
-        lArm = hwMap.get(CRServo.class, "lArm");
+
 //        Turret = hwMap.get(DcMotor.class,"Turret");
 //        Turret.setDirection(DcMotorSimple.Direction.REVERSE);
 //        Turret.setZeroPowerBehavior(DcMotor.ZeroPowerBehavior.BRAKE);
@@ -74,10 +67,7 @@ public class Team4602HM2024 {
 //        Elevator.setZeroPowerBehavior(DcMotor.ZeroPowerBehavior.BRAKE);
 //        Elevator.setMode(DcMotor.RunMode.RUN_WITHOUT_ENCODER);
 
-        liftMotor = hwMap.get(DcMotor.class, "liftMotor");
-        liftMotor.setDirection(DcMotorSimple.Direction.REVERSE);
-        liftMotor.setZeroPowerBehavior(DcMotor.ZeroPowerBehavior.BRAKE);
-        liftMotor.setMode(DcMotor.RunMode.RUN_WITHOUT_ENCODER);
+
 
 //        Arm2 = hwMap.get(DcMotor.class, "Arm2");
 //        Arm2.setDirection(DcMotorSimple.Direction.REVERSE);
